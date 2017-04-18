@@ -12,7 +12,8 @@ Public Function get_table_name_one_table_in_sheet(ByRef mysheet As Worksheet) As
     get_table_name_one_table_in_sheet = tablename
 End Function
 
-
+```
+```
 
 ' Find the number of columns in our table
 Public Function get_table_width(ByRef table As ListObject) As Integer
@@ -23,7 +24,8 @@ Public Function get_table_width(ByRef table As ListObject) As Integer
     get_table_width = numcol
 
 End Function
-
+```
+```
 ' Find the number of rows in our table
 Public Function get_table_height(ByRef table As ListObject) As Long
     Dim numrows As Long
@@ -56,6 +58,8 @@ Public Function get_table_array_of_rows(ByRef table As ListObject) As Variant
     
 End Function
 
+```
+```
 ' provide worksheet object. find all table names in sheet.  Return as array of strings
 Public Function get_table_name_all_tables_in_sheet(ByRef mysheet As Worksheet) As Variant
     Dim tbl As ListObject
@@ -73,6 +77,9 @@ Public Function get_table_name_all_tables_in_sheet(ByRef mysheet As Worksheet) A
     get_table_name_all_tables_in_sheet = myarray
     
 End Function
+
+```
+```
 
 ' Provide table object.  Obtain headers, return as array of strings
 Public Function get_table_headers(ByRef tableobj As ListObject) As Variant
@@ -93,6 +100,9 @@ Public Function get_table_headers(ByRef tableobj As ListObject) As Variant
     get_table_headers = myarray
 
 End Function
+
+```
+```
 
 ' Provide table object. Create databody array. Return as variant array of all data
 Public Function get_table_body_data(ByRef table As ListObject) As Variant
@@ -162,6 +172,8 @@ End Function
 Function IsInArray(valueToBeFound As Variant, arr As Variant) As Boolean
   IsInArray = (UBound(Filter(arr, valueToBeFound)) > -1)
 End Function
+```
+```
 
 ' non-specific multidimensional array function
 Public Function twod_array_from_one(ByRef initialarray() As Variant, numcols As Long, numrows As Long) As Variant
