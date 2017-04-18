@@ -1,2 +1,3 @@
-# VBA-_Repos
-I am something! I am nothing! I am old VBA code!!!
+# VBA Script Repository
+
+Repository to house VBA scripts that appeal to me and can be reused.
