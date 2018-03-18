@@ -15,7 +15,7 @@ End Sub
 
 ## Set row values in column range
 ```
-Sub cell_values_to_zero(this_sheet As Worksheet, this_row As Long, start_col As Long, end_col As Long, cell_content as Variant)
+Sub set_cell_values_for_range(this_sheet As Worksheet, this_row As Long, start_col As Long, end_col As Long, cell_content as Variant)
     'Tested
     Dim i As Long
     
