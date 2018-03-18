@@ -45,3 +45,47 @@ Function check_dupes_in_column(this_sheet As Worksheet, col_num As Long, start_r
 
 End Function
 ```
+## Return number of first blank row
+```
+Function get_first_sheet_blank_row(this_sheet As Worksheet) As Long
+    'Tested
+    Dim num_lrow As Long
+    
+    num_lrow = this_sheet.Cells(Rows.Count, 1).End(xlUp).Row + 1
+    
+    get_first_sheet_blank_row = num_lrow
+
+End Function
+```
+
+## Return number of last data row
+```
+Function get_last_sheet_data_row(this_sheet As Worksheet) As Long
+    'Tested
+    Dim num_lrow As Long
+    
+    num_lrow = this_sheet.Cells(Rows.Count, 1).End(xlUp).Row
+    
+    get_last_sheet_data_row = num_lrow
+
+End Function
+```
+
+## Return number of active rows (rows containing data for a given column)
+```
+Function get_num_active_rows(this_sheet As Worksheet, num_startrow As Long, num_col As Long, end_indicator As String) As Long
+    'Tested
+    Dim i As Long
+    
+    For i = num_startrow To this_sheet.Rows.Count
+        
+        If this_sheet.Cells(i, num_col).Value = end_indicator Then
+            get_num_active_rows = i - num_startrow
+            Exit For
+        End If
+        
+    Next i
+
+
+End Function
+```
